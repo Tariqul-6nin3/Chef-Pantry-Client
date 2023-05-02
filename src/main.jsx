@@ -8,6 +8,8 @@ import Login from "./components/Login.jsx";
 import Register from "./components/Register.jsx";
 import BLogs from "./components/BLogs.jsx";
 import Context from "./providers/Context.jsx";
+import ErrorPage from "./components/ErrorPage.jsx";
+import Banner from "./components/Banner.jsx";
 
 const router = createBrowserRouter([
   {
@@ -26,7 +28,12 @@ const router = createBrowserRouter([
         path: "/register",
         element: <Register></Register>,
       },
+      {
+        path: "/",
+        element: <Banner></Banner>,
+      },
     ],
+    errorElement: <ErrorPage></ErrorPage>,
   },
 ]);
 ReactDOM.createRoot(document.getElementById("root")).render(
