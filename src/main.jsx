@@ -9,13 +9,18 @@ import Register from "./components/Register.jsx";
 import BLogs from "./components/BLogs.jsx";
 import Context from "./providers/Context.jsx";
 import ErrorPage from "./components/ErrorPage.jsx";
-import Banner from "./components/Banner.jsx";
+
+import Home from "./components/Home.jsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Main></Main>,
     children: [
+      {
+        path: "/",
+        element: <Home />,
+      },
       {
         path: "/blogs",
         element: <BLogs></BLogs>,
@@ -27,10 +32,6 @@ const router = createBrowserRouter([
       {
         path: "/register",
         element: <Register></Register>,
-      },
-      {
-        path: "/",
-        element: <Banner></Banner>,
       },
     ],
     errorElement: <ErrorPage></ErrorPage>,
