@@ -12,6 +12,7 @@ import ErrorPage from "./components/ErrorPage.jsx";
 
 import Home from "./components/Home.jsx";
 import RecipeDetails from "./components/RecipeDetails.jsx";
+import PrivateRoutes from "./priveteroutes/PrivateRoutes.jsx";
 
 const router = createBrowserRouter([
   {
@@ -36,7 +37,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/recipe/:id",
-        element: <RecipeDetails></RecipeDetails>,
+        element: (
+          <PrivateRoutes>
+            <RecipeDetails></RecipeDetails>
+          </PrivateRoutes>
+        ),
         loader: ({ params }) =>
           fetch(`http://localhost:3000/recipe/${params.id}`),
       },

@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { myContext } from "../providers/Context";
 import { FaGoogle, FaGithub } from "react-icons/fa";
 import {
@@ -14,6 +14,9 @@ const Login = () => {
   const auth = getAuth(app);
   const googleProvider = new GoogleAuthProvider();
   const githubProvider = new GithubAuthProvider();
+  const navigate = useNavigate();
+  const location = useLocation();
+  const from = location.state?.from?.pathname || "/";
 
   const [user, setUser] = useState(null);
   const { loggedInUser } = useContext(myContext);
@@ -28,6 +31,7 @@ const Login = () => {
         console.log(loggedUser);
         setUser(loggedUser);
         form.reset();
+        navigate(from, { replace: true });
       })
       .catch(error => setError(error.message));
   };
