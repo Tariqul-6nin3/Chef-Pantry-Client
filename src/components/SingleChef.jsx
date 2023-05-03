@@ -3,15 +3,20 @@ import { FaGrinStars, FaThumbsUp } from "react-icons/fa";
 import { Rating } from "@smastrom/react-rating";
 import "@smastrom/react-rating/style.css";
 import { Link } from "react-router-dom";
+import "./styles/root.css";
 
 const SingleChef = props => {
   const { chef_picture, chef_name, years_of_experience, likes, rating, id } =
     props.singleChef;
   return (
     <>
-      <div className="card card-compact w-96 bg-base-100 shadow-xl">
+      <div className="card menu-item card-compact py-5 w-96 bg-base-100 shadow-xl">
         <figure>
-          <img className="h-96 w-full" src={chef_picture} alt="Shoes" />
+          <img
+            className="h-96 px-2 py-4 w-full object-cover  rounded-md"
+            src={chef_picture}
+            alt="Shoes"
+          />
         </figure>
         <div className="card-body">
           <h2 className="card-title">{chef_name}</h2>
@@ -27,7 +32,7 @@ const SingleChef = props => {
             <Rating readOnly style={{ maxWidth: 120 }} value={rating}></Rating>
           </div>
           <div className="card-actions justify-end">
-            <button className="btn btn-primary">
+            <button className="btn-secondary">
               <Link to={`/recipe/${id}`}>View Recipes</Link>
             </button>
           </div>

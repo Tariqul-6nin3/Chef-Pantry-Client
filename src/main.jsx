@@ -43,7 +43,9 @@ const router = createBrowserRouter([
           </PrivateRoutes>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:3000/recipe/${params.id}`),
+          fetch(
+            `https://chef-recipe-server-tariqul-6nin3.vercel.app/recipe/${params.id}`
+          ),
       },
     ],
     errorElement: <ErrorPage></ErrorPage>,

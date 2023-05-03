@@ -1,6 +1,7 @@
 import React, { useContext, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { myContext } from "../providers/Context";
+import "../components/styles/root.css";
 
 const Header = () => {
   const { user, logOut } = useContext(myContext);
@@ -12,14 +13,14 @@ const Header = () => {
       .catch(error => {});
   };
   return (
-    <div className="navbar bg-base-100">
+    <div className="navbar bg-black fixed z-40">
       <div className="flex-1">
-        <Link to="/" className="btn btn-ghost normal-case text-xl">
-          Chef Eye
+        <Link to="/" className="btn btn-ghost normal-case">
+          <span className="logo">Chef</span> <span className="span">Eye</span>
         </Link>
       </div>
       <div className="flex-none gap-2">
-        <div className="md:mr-44 text-2xl font-semibold text-black md:text-xl list-none md:flex md:space-x-7">
+        <div className="md:mr-44 text-2xl font-semibold md:text-xl list-none md:flex md:space-x-7">
           <li>
             <NavLink
               to="/"

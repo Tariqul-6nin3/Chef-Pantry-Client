@@ -10,7 +10,7 @@ const RecipeAuthorCard = props => {
   } = props.recipe;
 
   return (
-    <div className="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl">
+    <div className="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-visible md:max-w-2xl">
       <div className="md:flex">
         <div className="md:flex-shrink-0">
           <img
