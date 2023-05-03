@@ -11,6 +11,7 @@ import Context from "./providers/Context.jsx";
 import ErrorPage from "./components/ErrorPage.jsx";
 
 import Home from "./components/Home.jsx";
+import RecipeDetails from "./components/RecipeDetails.jsx";
 
 const router = createBrowserRouter([
   {
@@ -32,6 +33,12 @@ const router = createBrowserRouter([
       {
         path: "/register",
         element: <Register></Register>,
+      },
+      {
+        path: "/recipe/:id",
+        element: <RecipeDetails></RecipeDetails>,
+        loader: ({ params }) =>
+          fetch(`http://localhost:3000/recipe/${params.id}`),
       },
     ],
     errorElement: <ErrorPage></ErrorPage>,
