@@ -38,6 +38,7 @@ const ErrorPage = () => {
           <Link to="/"> Go back to safety</Link>
         </motion.button>
       </div>
+      {/* lottie animation here */}
       <div>
         <div>
           <Lottie options={defaultOptions} height={720} width={650}></Lottie>

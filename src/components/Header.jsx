@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { myContext } from "../providers/Context";
 import "../components/styles/root.css";
-import { FaBars, FaCross } from "react-icons/fa";
+import { FaBackspace, FaBackward, FaBars, FaCross } from "react-icons/fa";
 import "react-tooltip/dist/react-tooltip.css";
 import { Tooltip } from "react-tooltip";
 
@@ -27,7 +27,7 @@ const Header = () => {
           {open ? (
             <FaBars className="h-10 w-10" />
           ) : (
-            <FaCross className="h-10 w-10" />
+            <FaBackspace className="h-12 w-12" />
           )}
         </button>
       </div>
