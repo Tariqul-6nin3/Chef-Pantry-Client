@@ -1,4 +1,13 @@
+import moment from "moment/moment";
 import React from "react";
+import {
+  FaFacebook,
+  FaHamburger,
+  FaInstagram,
+  FaThumbsUp,
+  FaTiktok,
+  FaTwitter,
+} from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -8,9 +17,9 @@ const Footer = () => {
           <div className="w-full sm:w-1/2 lg:w-1/3 mb-6 lg:mb-0">
             <h3 className="text-2xl mb-3">Address</h3>
             <p className="text-lg">
-              1234 Main St
+              Loacated at
               <br />
-              Anytown, USA 12345
+              Faridpur, Dhaka-Bangladesh
             </p>
           </div>
           <div className="w-full sm:w-1/2 lg:w-1/3 mb-6 lg:mb-0">
@@ -24,24 +33,17 @@ const Footer = () => {
           <div className="w-full sm:w-1/2 lg:w-1/3">
             <h3 className="text-2xl mb-3">Follow Us</h3>
             <div className="flex space-x-4">
-              <a href="#" className="text-xl text-gray-200 hover:text-gray-400">
-                <i className="fab fa-facebook"></i>
-              </a>
-              <a href="#" className="text-xl text-gray-200 hover:text-gray-400">
-                <i className="fab fa-twitter"></i>
-              </a>
-              <a href="#" className="text-xl text-gray-200 hover:text-gray-400">
-                <i className="fab fa-instagram"></i>
-              </a>
-              <a href="#" className="text-xl text-gray-200 hover:text-gray-400">
-                <i className="fab fa-linkedin"></i>
-              </a>
+              <FaFacebook className="text-3xl font-bold"></FaFacebook>
+              <FaInstagram className="text-3xl font-bold"></FaInstagram>
+              <FaTwitter className="text-3xl font-bold"></FaTwitter>
+              <FaTiktok className="text-3xl font-bold"></FaTiktok>
             </div>
           </div>
         </div>
         <div className="mt-8 text-center">
           <p className="text-lg">
-            &copy; 2023 My Company. All rights reserved.
+            &copy; {moment().format("MMMM Do YYYY, h:mm:ss a")} Tariqul Islam.
+            All rights reserved.
           </p>
         </div>
       </div>

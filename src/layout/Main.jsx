@@ -9,7 +9,9 @@ const Main = () => {
   return (
     <div className="body">
       <Header></Header>
-      <Outlet></Outlet>
+      <div className="py-32">
+        <Outlet></Outlet>
+      </div>
       <Footer></Footer>
     </div>
   );

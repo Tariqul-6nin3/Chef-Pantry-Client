@@ -1,5 +1,5 @@
 import React from "react";
-import { FaGrinStars, FaThumbsUp } from "react-icons/fa";
+import { FaThumbsUp } from "react-icons/fa";
 import { Rating } from "@smastrom/react-rating";
 import "@smastrom/react-rating/style.css";
 import { Link } from "react-router-dom";

@@ -6,7 +6,7 @@ import Lesson from "./Lesson";
 
 const Home = () => {
   return (
-    <div>
+    <div className="">
       <Banner></Banner>
       <ChefInfo />
       <Lesson />

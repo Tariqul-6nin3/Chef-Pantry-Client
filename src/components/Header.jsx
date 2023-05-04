@@ -16,7 +16,7 @@ const Header = () => {
       .catch(error => {});
   };
   return (
-    <div className="navbar md:py-4 bg-gray-50 fixed z-40">
+    <div className="navbar md:py-4  bg-gray-50 fixed z-10">
       <div className="flex-1">
         <Link to="/" className="btn btn-ghost normal-case">
           <span className="text-3xl font-serif font-semibold">ChefPantry</span>
@@ -75,7 +75,7 @@ const Header = () => {
               <div className="mb-2">
                 <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                   <div
-                    className="w-10 rounded-full"
+                    className="w-10 rounded-full mb-4"
                     data-tooltip-id="my-tooltip"
                     data-tooltip-content={user.displayName}
                     data-tooltip-place="left">

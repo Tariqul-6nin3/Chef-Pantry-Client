@@ -12,6 +12,7 @@ const RecipeDetails = () => {
     <>
       <RecipeAuthor recipe={recipe}></RecipeAuthor>
       <div>
+        <h3 className="section-title">Some of famous recipe</h3>
         {allRecipe.map(singleRecipe => (
           <RacipeList
             key={singleRecipe.id}
