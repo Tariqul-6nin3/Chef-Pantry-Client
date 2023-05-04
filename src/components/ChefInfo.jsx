@@ -12,9 +12,7 @@ const ChefInfo = () => {
   }, []);
   return (
     <div className="mt-12">
-      <h3 className="section-title">
-        Reneowed <br /> Chefs
-      </h3>
+      <h3 className="section-title">Our Chefs</h3>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-container">
         {chefData.map(singleChef => (
           <SingleChef key={singleChef.id} singleChef={singleChef}></SingleChef>

@@ -3,6 +3,7 @@ import { FaThumbsUp } from "react-icons/fa";
 import { Rating } from "@smastrom/react-rating";
 import "@smastrom/react-rating/style.css";
 import { Link } from "react-router-dom";
+import LazyLoad from "react-lazy-load";
 import "./styles/root.css";
 
 const SingleChef = props => {
@@ -19,11 +20,13 @@ const SingleChef = props => {
     <>
       <div className="card menu-item card-compact pt-2 pb-7 w-11/12 mx-auto md:w-96 bg-base-100 shadow-xl">
         <figure>
-          <img
-            className="h-96 px-2 py-4 w-full object-cover  rounded-md"
-            src={chef_picture}
-            alt="Shoes"
-          />
+          <LazyLoad width={1024} offset={300}>
+            <img
+              className="h-96 px-2 py-4 w-full object-cover  rounded-md"
+              src={chef_picture}
+              alt="Shoes"
+            />
+          </LazyLoad>
         </figure>
         <div className="card-body">
           <div className="px-4 py-2">

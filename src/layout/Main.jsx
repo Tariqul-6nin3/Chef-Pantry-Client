@@ -8,8 +8,10 @@ import "../components/styles/root.css";
 const Main = () => {
   return (
     <div className="body">
-      <Header></Header>
-      <div className="py-32">
+      <div className="pb-10">
+        <Header></Header>
+      </div>
+      <div className="py-20">
         <Outlet></Outlet>
       </div>
       <Footer></Footer>

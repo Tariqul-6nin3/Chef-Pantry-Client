@@ -6,7 +6,7 @@ const Banner = () => {
     <div className="banner">
       <div className="container">
         <div className="banner-info md:py-20">
-          <h1 className="banner-title  text-4xl md:text-6xl font-bold">
+          <h1 className=" px-1  text-4xl md:text-6xl font-bold">
             "Satisfy your <span className="text-pink-500">food</span> <br />{" "}
             cravings with a <br />
             click!"

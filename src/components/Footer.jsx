@@ -30,9 +30,9 @@ const Footer = () => {
               Phone: 123-456-7890
             </p>
           </div>
-          <div className="w-full sm:w-1/2 lg:w-1/3">
+          <div className="w-full sm:w-1/2 text-center lg:w-1/3">
             <h3 className="text-2xl mb-3">Follow Us</h3>
-            <div className="flex space-x-4">
+            <div className="flex space-x-4 justify-center">
               <FaFacebook className="text-3xl font-bold"></FaFacebook>
               <FaInstagram className="text-3xl font-bold"></FaInstagram>
               <FaTwitter className="text-3xl font-bold"></FaTwitter>
