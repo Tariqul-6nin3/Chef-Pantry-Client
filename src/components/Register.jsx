@@ -24,6 +24,8 @@ const Register = () => {
       setError("Your password doesn't match. Please check again");
     } else if (password.length < 6) {
       setError("Password Could not be less than 6 character");
+    } else if (!email) {
+      setError("Please update your email");
     }
     createUser(email, password)
       .then(result => {

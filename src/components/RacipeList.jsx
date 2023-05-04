@@ -1,5 +1,6 @@
 import { Rating } from "@smastrom/react-rating";
 import React, { useState } from "react";
+import { FaHeart } from "react-icons/fa";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -50,6 +51,7 @@ const RacipeList = props => {
               onClick={toastifying}
               disabled={favourite}
               className="btn-secondary disabled:font-serif disabled:font-semibold disabled:text-slate-400 disabled:border-orange-700 ">
+              <FaHeart className="inline  text-lg text-black font-bold"></FaHeart>
               Favourite
             </button>
             <ToastContainer

@@ -1,13 +1,6 @@
 import moment from "moment/moment";
 import React from "react";
-import {
-  FaFacebook,
-  FaHamburger,
-  FaInstagram,
-  FaThumbsUp,
-  FaTiktok,
-  FaTwitter,
-} from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaTiktok, FaTwitter } from "react-icons/fa";
 
 const Footer = () => {
   return (
