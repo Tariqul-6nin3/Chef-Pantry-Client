@@ -60,7 +60,7 @@ const Login = () => {
   };
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-purple-600 to-purple-400 flex justify-center items-center">
-      <div className="bg-white shadow-md rounded px-10 pt-6 pb-8 mb-4 flex flex-col w-2/3 md:w-5/6 lg:w-1/3">
+      <div className="bg-white shadow-md rounded px-10 pt-6 pb-8 mb-4 flex flex-col w-11/12 mx-auto md:w-5/6 lg:w-2/5">
         <div className="mb-4">
           <h1 className="text-2xl font-bold text-center text-gray-700">
             Login
@@ -99,22 +99,22 @@ const Login = () => {
           </div>
           <div className="mb-6 text-center">
             <button
-              className="bg-purple-700 hover:bg-purple-800 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+              className="bg-purple-700 hover:bg-purple-800 text-white font-bold py-2 px-8 rounded focus:outline-none focus:shadow-outline"
               type="submit">
               Login
             </button>
           </div>
           <hr className="border-2 text-black text-center mb-6" />
-          <div className="flex justify-center">
+          <div className="flex md:flex-row flex-col justify-center">
             <button
               onClick={handleGoogleLogIn}
-              className="btn btn-outline mx-2">
+              className="btn btn-outline md:mx-2 mt-4">
               <FaGoogle className="mr-3 text-2xl" />
               Continue with Google
             </button>
             <button
               onClick={handleGithubLogIn}
-              className="btn btn-outline mx-2">
+              className="btn btn-outline mt-3 md:mt-4 md:mx-2">
               <FaGithub className="mr-3 text-2xl" />
               Continue with Github
             </button>

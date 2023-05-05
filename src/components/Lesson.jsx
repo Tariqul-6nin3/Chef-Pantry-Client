@@ -2,6 +2,7 @@ import React from "react";
 import chef from "../assets/master-chef.jpg";
 import "./styles/root.css";
 import { FaVideo } from "react-icons/fa";
+import LazyLoad from "react-lazy-load";
 
 const Lesson = () => {
   return (
@@ -21,9 +22,11 @@ const Lesson = () => {
           </button>
         </div>
       </div>
-      <div className="mt-7 md:mt-0">
-        <img className="w-full h-full" src={chef} alt="" />
-      </div>
+      <LazyLoad offset={300}>
+        <div className="mt-7 md:mt-0">
+          <img className="w-full h-full" src={chef} alt="" />
+        </div>
+      </LazyLoad>
     </div>
   );
 };

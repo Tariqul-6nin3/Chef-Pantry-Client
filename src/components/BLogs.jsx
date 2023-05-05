@@ -1,40 +1,42 @@
 import React from "react";
-import { PDFDownloadLink } from "@react-pdf/renderer";
-import MyPdf from "./MyPdf";
+
 import ReactToPdf from "react-to-pdf";
 
 import "../components/styles/root.css";
 
 const Blogs = () => {
   const ref = React.createRef();
+  const ref1 = React.createRef();
+  const ref2 = React.createRef();
+  const ref3 = React.createRef();
   return (
-    <div ref={ref}>
-      <ReactToPdf targetRef={ref} filename="div-blue.pdf">
-        {({ toPdf }) => (
-          <button className="btn-secondary" onClick={toPdf}>
-            Generate pdf
-          </button>
-        )}
-      </ReactToPdf>
-
-      <div className="max-w-5xl mx-auto">
+    <div>
+      <div className="max-w-5xl mx-auto md:w-full w-11/12">
         <div className="text-center">
           <h3 className="text-4xl text-red-100 font-serif font-bold.">
             Question And Answering
           </h3>
         </div>
-        <div className="max-w-7xl mx-auto mt-10">
-          <div
-            tabIndex={0}
-            className="collapse collapse-plus border border-base-300 bg-base-100 rounded-box">
-            <div className="collapse-title text-xl font-medium ">
+        <div className="max-w-7xl mx-auto mt-10 space-y-5">
+          <div className="border border-base-300 py-5  bg-base-100 rounded-box">
+            <div className="flex justify-center">
+              <ReactToPdf targetRef={ref} filename="div-blue.pdf">
+                {({ toPdf }) => (
+                  <button className="btn-secondary" onClick={toPdf}>
+                    Download pdf
+                  </button>
+                )}
+              </ReactToPdf>
+            </div>
+
+            <div className=" ml-6 mb-5   text-xl md:text-3xl font-bold ">
               <h3>
                 Describe the differences between uncontrolled and controlled
                 components.
               </h3>
             </div>
-            <div className="collapse-content ">
-              <p tabIndex={0} className="px-8">
+            <div className=" " ref={ref}>
+              <p className="px-8">
                 <strong className="text-2xl font-bold italic font-mono">
                   Control Component:
                 </strong>
@@ -62,14 +64,21 @@ const Blogs = () => {
               </p>
             </div>
           </div>
-          <div
-            tabIndex={0}
-            className="collapse collapse-plus border border-base-300 bg-base-100 rounded-box">
-            <div className="collapse-title text-xl font-medium">
+          <div className=" border border-base-300 py-5  bg-base-100 rounded-box">
+            <div className="flex justify-center">
+              <ReactToPdf targetRef={ref1} filename="div-blue.pdf">
+                {({ toPdf }) => (
+                  <button className="btn-secondary" onClick={toPdf}>
+                    Download pdf
+                  </button>
+                )}
+              </ReactToPdf>
+            </div>
+            <div className=" ml-6 mb-5  text-xl md:text-3xl font-bold">
               <h3>How to validate React props using PropTypes?</h3>
             </div>
-            <div className="collapse-content ">
-              <p tabIndex={0} className="px-8 text-lg py-3">
+            <div className=" " ref={ref1}>
+              <p className="px-8 text-lg py-3">
                 <strong className="text-2xl font-bold italic font-mono">
                   Here is some method to validate React prop by using Proptypes:
                 </strong>{" "}
@@ -102,14 +111,21 @@ const Blogs = () => {
               </p>
             </div>
           </div>
-          <div
-            tabIndex={0}
-            className="collapse collapse-plus border border-base-300 bg-base-100 rounded-box">
-            <div className="collapse-title text-xl font-medium">
+          <div className=" border border-base-300 py-5  bg-base-100 rounded-box">
+            <div className="flex justify-center">
+              <ReactToPdf targetRef={ref2} filename="div-blue.pdf">
+                {({ toPdf }) => (
+                  <button className="btn-secondary" onClick={toPdf}>
+                    Download pdf
+                  </button>
+                )}
+              </ReactToPdf>
+            </div>
+            <div className=" ml-6 mb-5  text-xl md:text-3xl font-bold">
               <h3>Write down the difference between nodejs and express js</h3>
             </div>
-            <div className="collapse-content ">
-              <p tabIndex={0} className="px-8 py-3 text-lg tracking-wide">
+            <div className=" " ref={ref2}>
+              <p className="px-8 py-3 text-lg tracking-wide">
                 <strong className="text-2xl font-bold italic font-mono">
                   Difference between node Js and React Js:
                 </strong>{" "}
@@ -164,14 +180,21 @@ const Blogs = () => {
               </div>
             </div>
           </div>
-          <div
-            tabIndex={0}
-            className="collapse collapse-plus border border-base-300 bg-base-100 rounded-box">
-            <div className="collapse-title text-xl font-medium">
+          <div className=" border border-base-300 py-5  bg-base-100 rounded-box">
+            <div className="flex justify-center">
+              <ReactToPdf targetRef={ref3} filename="div-blue.pdf">
+                {({ toPdf }) => (
+                  <button className="btn-secondary" onClick={toPdf}>
+                    Download pdf
+                  </button>
+                )}
+              </ReactToPdf>
+            </div>
+            <div className=" ml-6 mb-5  text-xl md:text-3xl font-bold">
               <h3>What is Custom hook?</h3>
             </div>
-            <div className="collapse-content ">
-              <p tabIndex={0} className="px-8 text-lg py-3">
+            <div className=" " ref={ref3}>
+              <p className="px-8 text-lg py-3">
                 <strong className="text-2xl font-bold italic font-mono">
                   Definition of Custom Hook:
                 </strong>{" "}

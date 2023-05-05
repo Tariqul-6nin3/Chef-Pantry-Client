@@ -67,7 +67,7 @@
   background-repeat: no-repeat;
   background-color: #02001b93;
   background-blend-mode: darken;
-  clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+  clip-path: polygon(0 0, 100% 2%, 100% 85%, 0% 100%);
 }
 .banner-info {
   display: flex;

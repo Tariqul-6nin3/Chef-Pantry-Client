@@ -15,8 +15,8 @@ const RecipeAuthorCard = props => {
   } = props.recipe;
 
   return (
-    <div className="max-w-xl mx-auto bg-white rounded-xl shadow-2xl overflow-visible md:max-w-4xl">
-      <div className="grid grid-cols-3">
+    <div className="max-w-xl md:w-full w-11/12 mx-auto bg-white rounded-xl shadow-2xl overflow-visible md:max-w-4xl">
+      <div className="grid grid-cols-1 md:grid-cols-3">
         <div className="h-64 p-3">
           <img
             className="h-48 rounded-t-xl w-full object-cover md:h-full md:w-64"
@@ -24,13 +24,13 @@ const RecipeAuthorCard = props => {
             alt={chef_name}
           />
         </div>
-        <div className="px-3 py-4 mt-5">
+        <div className="px-3 md:py-4 md:mt-5">
           <h2 className=" text-2xl font-bold text-gray-900">{chef_name}</h2>
           <p className="text-slate-600 font-medium text-base mt-2">
             {chef_about} {chef_about}
           </p>
         </div>
-        <div className="px-7 py-10">
+        <div className="md:px-7 py-6 px-3 md:py-10">
           <div className="uppercase tracking-wide text-xl text-indigo-800 font-semibold">
             {years_of_experience} years of experience
           </div>
@@ -46,7 +46,7 @@ const RecipeAuthorCard = props => {
           <div className="mt-1">
             <Rating readOnly style={{ maxWidth: 120 }} value={ratings}></Rating>
           </div>
-          <button className="btn-secondary w-5/6">About</button>
+          <button className="btn-secondary mt-4 md:mt-0 w-5/6">About</button>
         </div>
       </div>
     </div>

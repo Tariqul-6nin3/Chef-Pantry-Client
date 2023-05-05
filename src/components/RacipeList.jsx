@@ -15,7 +15,7 @@ const RacipeList = props => {
     props.singleRecipe;
 
   return (
-    <div className="max-w-4xl grid grid-cols-3 gap-5 mx-auto my-4 bg-white shadow-lg rounded-lg overflow-hidden w-full">
+    <div className="max-w-4xl grid grid-cols-1 md:grid-cols-3 gap-5 mx-auto my-4 bg-white shadow-lg rounded-lg overflow-hidden w-11/12  md:w-full">
       <div>
         <img
           className="object-cover w-full h-72"
@@ -42,7 +42,7 @@ const RacipeList = props => {
           {cooking_method.slice(0, 200)}{" "}
           <span className="text-sky-700 text-lg">read more...</span>
         </p>
-        <div className="flex gap-4 items-center">
+        <div className="flex gap-3 items-center">
           <div className="mt-1">
             <Rating readOnly style={{ maxWidth: 120 }} value={rating}></Rating>
           </div>
@@ -51,11 +51,10 @@ const RacipeList = props => {
               onClick={toastifying}
               disabled={favourite}
               className="btn-secondary disabled:font-serif disabled:font-semibold disabled:text-slate-400 disabled:border-orange-700 ">
-              <FaHeart className="inline  text-lg text-black font-bold"></FaHeart>
               Favourite
             </button>
             <ToastContainer
-              position="top-right"
+              position="top-center"
               autoClose={5000}
               hideProgressBar={false}
               newestOnTop={false}

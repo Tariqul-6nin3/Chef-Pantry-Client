@@ -1,9 +1,10 @@
 import React, { useContext, useState } from "react";
 import { myContext } from "../providers/Context";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { updateProfile } from "firebase/auth";
 
 const Register = () => {
+  const navigate = useNavigate();
   const [user, setUSer] = useState(null);
   console.log(user);
   const [error, setError] = useState("");
@@ -32,7 +33,10 @@ const Register = () => {
         const createdUser = result.user;
         console.log(createdUser);
         setUSer(createdUser);
+        setError("");
         handleDisplayName(result.user, name, photo);
+        form.reset();
+        navigate("/login");
       })
       .catch(error => setError(error.message));
   };
@@ -48,19 +52,14 @@ const Register = () => {
       .catch(error => setError(error.message));
   };
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-900 via-purple-600 to-purple-400 flex justify-center items-center ">
-      <div className="hero-content flex-col ">
-        <div className="text-center">
-          <h1 className="text-5xl font-bold">Sign Up Here</h1>
-          <p className="py-6">
-            Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-            excepturi exercitationem quasi. In deleniti eaque aut repudiandae et
-            a id nisi.
-          </p>
+    <div className="min-h-screen  bg-gradient-to-br from-purple-900 via-purple-600 to-purple-400  ">
+      <div className="max-w-xl w-11/12 md:w-full md:max-w-2xl space-y-4 md:space-y-6 py-6 mx-auto ">
+        <div className=" text-center">
+          <h1 className="md:text-5xl text-4xl font-bold py-4">Register Here</h1>
         </div>
         <form
           onSubmit={handleRegister}
-          className="card flex-shrink-0 w-full max-w-xl shadow-2xl bg-base-100 px-6 py-4">
+          className="card flex-shrink-0 mx-auto  shadow-2xl bg-base-100 px-3 md:px-4 py-4">
           <div className="card-body">
             <div className="form-control">
               <label className="label">
@@ -127,7 +126,7 @@ const Register = () => {
               />
             </div>
             <p className="text-red-700 text-base ">{error}</p>
-            <div className="form-control mt-3">
+            <div className="form-control w-full md:w-1/2 mx-auto mt-3">
               <button className="btn btn-primary">Sign Up</button>
             </div>
             <p className="mt-3">
